@@ -184,7 +184,7 @@ def resultadosL(request):
 
 def busquedaNombreC(request):
     
-    return render(request, "AppCoder/cursos.html")    
+    return render(request, "AppCoder/inicio.html")    
     
 def resultadosC(request):
     
@@ -193,7 +193,7 @@ def resultadosC(request):
         nombre=request.GET["nombre"]
         cursos = Curso.objects.filter(nombre__iexact=nombre)
         
-        return render(request, "AppCoder/cursos.html", {"cursos":cursos, "nombre":nombre})
+        return render(request, "AppCoder/inicio.html", {"cursos":cursos, "nombre":nombre})
     
     else:
         
@@ -204,7 +204,7 @@ def resultadosC(request):
 
 def busquedaNombreAF(request):
     
-    return render(request, "AppCoder/actividades.html")    
+    return render(request, "AppCoder/inicio.html")    
     
 def resultadosAF(request):
     
@@ -213,7 +213,7 @@ def resultadosAF(request):
         nombre=request.GET["nombre"]
         actividades = Actividad.objects.filter(nombre__iexact=nombre)
         
-        return render(request, "AppCoder/actividades.html", {"actividades":actividades, "nombre":nombre})
+        return render(request, "AppCoder/inicio.html", {"actividades":actividades, "nombre":nombre})
     
     else:
         
