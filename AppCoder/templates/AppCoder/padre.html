@@ -41,11 +41,14 @@
                 {% endwith %}
                 <a class="btn btn-primary" href="{% url 'Logout' %}">Cerrar sesión</a>
                 <a class="btn btn-primary" href="{% url 'EditarUsuario' %}">Editar usuario</a>
+                <a class="btn btn-primary" href="{% url 'Avatar' %}">Cambiar Avatar</a>
                 
                 {% else %}
 
                 <a class="btn btn-primary" href="{% url 'SignUp' %}">Registrarse</a>
                 <a class="btn btn-primary" href="{% url 'Login' %}">Iniciar sesión</a>
+
+
 
                 {% endif %}
                 
