@@ -1,0 +1,21 @@
+
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+
+{% endblock %}
+
+{% block descripcion %}
+
+<p>Nombre: {{libro.nombre}}</p>
+<p>Autor: {{libro.autor}}</p>
+
+<a href="{% url 'LibrosLeer' %}"> Regresar </a>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+
+
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="" method="POST"> {% csrf_token %} 
+
+    
+
+    <p>¿Estás seguro que quieres eliminar este curso?</p>
+
+
+  <input type="submit" value="Confirmar">
+
+
+</form>
+
+
+{% endblock %}

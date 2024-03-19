@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% for curso in courses %}
+
+    <p>Curso: {{curso.nombre}}</p>
+    <p>Docente: {{curso.docente}}</p>
+
+
+    <button>
+        <a href="{% url 'CursosDetalle' curso.nombre %}"> Ver curso</a>
+    </button>
+
+
+    ______________________________________
+
+    {% endfor %}
+
+    <br>
+
+    
+</body>
+</html>

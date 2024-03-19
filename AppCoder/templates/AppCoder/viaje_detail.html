@@ -1,0 +1,21 @@
+
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+
+{% endblock %}
+
+{% block descripcion %}
+
+<p>Nombre: {{viaje.nombre}}</p>
+<p>Duracion: {{viaje.duracion}}</p>
+
+<a href="{% url 'ViajesLeer' %}"> Regresar </a>
+
+
+{% endblock %}

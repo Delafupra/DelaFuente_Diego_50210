@@ -1,0 +1,35 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+
+{% endblock %}
+
+{% block descripcion %}
+
+{% for actividad in object_list %}
+
+<p>Actividad fisíca: {{actividad.nombre}}</p>
+<p>Frecuencia: {{actividad.frecuencia}}</p>
+
+
+<a href="{% url 'ActividadesDetalle' actividad.id %}"> Ver actividad</a>
+<a href="{% url 'ActividadesEditar' actividad.id %}"> Editar actividad</a>
+<a href="{% url 'ActividadesBorrar' actividad.id %}"> Eliminar actividad</a>
+
+
+______________________________________
+
+{% endfor %}
+
+<br>
+
+<a href="{% url 'ActividadesCrear' %}"> Crear actividad</a>
+
+
+{% endblock %}
+

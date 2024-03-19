@@ -1,0 +1,35 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+
+{% endblock %}
+
+{% block descripcion %}
+
+{% for viaje in object_list %}
+
+<p>Viaje: {{viaje.nombre}}</p>
+<p>Duración: {{viaje.duracion}}</p>
+
+
+<a href="{% url 'ViajesDetalle' viaje.id %}"> Ver viaje</a>
+<a href="{% url 'ViajesEditar' viaje.id %}"> Editar viaje</a>
+<a href="{% url 'ViajesBorrar' viaje.id %}"> Eliminar viaje</a>
+
+
+______________________________________
+
+{% endfor %}
+
+<br>
+
+<a href="{% url 'ViajesCrear' %}"> Crear viaje</a>
+
+
+{% endblock %}
+

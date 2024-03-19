@@ -1,0 +1,73 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Bienvenidos a mi página web!
+
+{% endblock %}
+
+{% block descripcion %}
+En esta página puedo consultar y agregar actividades que quiero realizar.
+
+
+<form action="/AppCoder/resultados/" method="GET">
+        
+    <input type="text" name="nombre">
+
+    <input type="submit" name="Buscar">
+
+</form>
+<p>Estamos buscando el viaje a: {{viaje.nombre}}</p>
+
+<form action="/AppCoder/resultadosL/" method="GET">
+        
+    <input type="text" name="nombre">
+
+    <input type="submit" name="Buscar">
+
+</form>
+<p>Estamos buscando el libro: {{libro.nombre}}</p>
+<form action="/AppCoder/resultadosC/" method="GET">
+        
+    <input type="text" name="nombre">
+
+    <input type="submit" name="Buscar">
+
+</form>
+<p>Estamos buscando el curso: {{curso.nombre}}</p>
+<form action="/AppCoder/resultadosAF/" method="GET">
+        
+    <input type="text" name="nombre">
+
+    <input type="submit" name="Buscar">
+
+</form>
+<p>Estamos buscando la actividad fisica: {{actividad.nombre}}</p>
+
+
+{% for viaje in viajes %}
+
+<p>Nombre: {{viaje.nombre}} --- Duración: {{viaje.duracion}} semanas </p>
+
+{% endfor %}
+{% for libro in libros %}
+
+<p>Nombre: {{libro.nombre}} --- Autor: {{libro.autor}} </p>
+
+{% endfor %}
+{% for curso in cursos %}
+
+<p>Nombre: {{curso.nombre}} --- {{curso.docente}}  </p>
+
+{% endfor %}
+{% for actividad in actividades %}
+
+<p>Nombre: {{actividad.nombre}} --- {{actividad.frecuencia}} veces por semana </p>
+
+{% endfor %}
+
+{% endblock %}

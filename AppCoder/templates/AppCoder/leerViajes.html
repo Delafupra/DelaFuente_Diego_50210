@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% for viaje in trips %}
+
+    <p>Viaje: {{viaje.nombre}}</p>
+    <p>Duración: {{viaje.duracion}}</p>
+
+
+    <button>
+        <a href="{% url 'ViajesDetalle' viaje.nombre %}"> Ver viaje</a>
+    </button>
+
+
+    ______________________________________
+
+    {% endfor %}
+
+    <br>
+
+    
+</body>
+</html>
